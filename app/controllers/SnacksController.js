@@ -7,7 +7,12 @@ export class SnacksController {
     constructor() {
         console.log('🍟')
         this.drawSnacks()
+        this.drawMoney()
         AppState.on('snacks', this.addQuarter)
+        AppState.on('money', this.drawMoney)
+
+        // both a this and an observer because we want both to see the money amount when the page loads
+        // AND for that amount to change when the money value in the appstate changes...
 
     }
 
@@ -27,5 +32,20 @@ export class SnacksController {
 
     }
 
+    drawMoney() {
+
+        console.log('💰')
+        let moneyAmountElement = document.getElementById('money-amount')
+
+
+        moneyAmountElement.innerHTML = `${AppState.money}`
+
+    }
+
+    buySnacks() {
+
+        console.log('🍟')
+        snacksService.buySnacks()
+    }
 
 }

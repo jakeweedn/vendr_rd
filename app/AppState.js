@@ -7,6 +7,7 @@ class ObservableAppState extends EventEmitter {
   /**@type {import('./models/Example.js').Example[]} */
   examples = []
 
+
   snacks = [
 
     new Snack({
