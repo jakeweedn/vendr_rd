@@ -28,6 +28,23 @@ class ObservableAppState extends EventEmitter {
 
     }),
 
+    new Snack({
+
+      name: "Fritos",
+      price: 4.00,
+      imgUrl: "https://www.fritos.com/sites/fritos.com/files//2020-11/fritos%20original.png"
+
+
+    }),
+
+    // new Snack({
+
+    //   name: 
+    //   price: 
+
+
+    // })
+
   ]
 
   money = 0;

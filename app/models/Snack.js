@@ -9,7 +9,7 @@ export class Snack {
 
     get snackCard() {
         // return `<p> ${this.name} </p>`
-        return `
+        return /*html*/ `
          <article class="col-md-4">
         <div class="card">
 
@@ -21,17 +21,21 @@ export class Snack {
 
           </div>
 
-          <div class="card-footer">
-          ${this.name}, ${this.price}
+          <div class="card-footer d-flex justify-content-evenly">
+            <a> ${this.name}, $ ${this.priceWitheDecimals} </a>
 
                
-            <button> Buy Snack </button>
+            <button onclick = "app.SnacksController.buy('${this.name}')"> Buy Snack </button>
 
-          </div>
+          
 
         </div>
         
         </article>`
+    }
+
+    get priceWitheDecimals() {
+        return this.price.toFixed(2)
     }
 
 

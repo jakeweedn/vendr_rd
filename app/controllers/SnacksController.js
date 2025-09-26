@@ -14,6 +14,8 @@ export class SnacksController {
         // both a this and an observer because we want both to see the money amount when the page loads
         // AND for that amount to change when the money value in the appstate changes...
 
+
+
     }
 
     drawSnacks() {
@@ -42,10 +44,10 @@ export class SnacksController {
 
     }
 
-    buySnacks() {
+    buy(snackName) {
 
         console.log('🍟')
-        snacksService.buySnacks()
+        snacksService.buy(snackName)
     }
 
 }
