@@ -3,6 +3,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url("https://huckberry.imgix.net/journal_post_content_block_images/000/009/937/images/original/vending-machine-22.jpg?auto=format%2C%20compress&crop=top&fit=clip&cs=tinysrgb&ixlib=react-9.8.1");
+  background-size: cover;
 }
 
 main {
@@ -10,6 +12,7 @@ main {
   display: flex;
   place-content: center;
   align-items: center;
+
 }
 
 #pop-toast-container {
